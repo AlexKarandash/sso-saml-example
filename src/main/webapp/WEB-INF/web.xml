@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <servlet>
+    <servlet-name>authServlet</servlet-name>
+    <servlet-class>com.subbotin.saml.servlets.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>authServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>logoutServlet</servlet-name>
+    <servlet-class>com.subbotin.saml.servlets.LogoutServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>logoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>acsServlet</servlet-name>
+    <servlet-class>com.subbotin.saml.servlets.AcsServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>acsServlet</servlet-name>
+    <url-pattern>/acs</url-pattern>
+  </servlet-mapping>
+</web-app>
