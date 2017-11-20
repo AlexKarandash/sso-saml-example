@@ -35,8 +35,8 @@ import java.util.List;
 import java.util.Map;
 
 public class SamlServiceImpl implements SamlService {
-    public static Logger logger = LoggerFactory.getLogger(SamlServiceImpl.class);
-    public static SamlSystemService samlSystemService = new SamlSystemServiceImpl();
+    static Logger logger = LoggerFactory.getLogger(SamlServiceImpl.class);
+    static SamlSystemService samlSystemService = new SamlSystemServiceImpl();
 
     @Override
     public SamlRequest createSamlRequest(String acsUrl) {
